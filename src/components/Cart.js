@@ -6,10 +6,12 @@ const Cart = (props) => {
     <div className="cart-container">
       <div className="cart">
         <h2>Your Cart</h2>
-        {/*.map goes here */}
+        {props.cart.items.map(element => {
+          return <CartItem key={element.cartId}/>
+        })}
       </div>
       <div className="total">
-        Your total:
+        Your total: ${props.cart.total}
         <button>Checkout</button>
       </div>
     </div>
