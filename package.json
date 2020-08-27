@@ -34,3 +34,4 @@
     ]
   }
 }
+"main": "server/index.js"
