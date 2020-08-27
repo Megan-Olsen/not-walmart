@@ -9,22 +9,7 @@ module.exports = {
         res.status(200).send(cart)
     },
     addToCart: (req, res) => {
-        const {productId, quantity} = req.body
 
-        const index = cart.items.findIndex((element) => element.id === +productId)
-
-        if(index === -1){
-            const product = products.find((element) => element.id === +productId)
-            
-            product.cartId = cartId
-            product.quantity = +quantity
-
-            cart.items.push(product)
-
-            cartId++
-        } else {
-            cart.items[index].quantity += +quantity
-        }
     },
     changeQuantity: (req, res) => {
 
